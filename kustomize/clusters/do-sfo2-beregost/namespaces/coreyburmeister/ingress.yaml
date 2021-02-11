@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      return 200 "They don't know it be like it is, but it do.";
+  name: cburmeister-apex
+spec:
+  rules:
+  - host: coreyburmeister.com
+  tls:
+  - hosts:
+    - coreyburmeister.com
+    secretName: coreyburmeister-apex-tls
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      return 200 "They don't know it be like it is, but it do.";
+  name: cburmeister-www
+spec:
+  rules:
+  - host: www.coreyburmeister.com
+  tls:
+  - hosts:
+    - www.coreyburmeister.com
+    secretName: coreyburmeister-www-tls
