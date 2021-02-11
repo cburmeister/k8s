@@ -15,4 +15,4 @@ jobs:
         version: "1.19.7"
     - name: Deploy (dry run)
       run: |
-        kubectl apply --server-dry-run -k kustomize/clusters/do-sfo2-beregost
+        kubectl apply --dry-run=server -k kustomize/clusters/do-sfo2-beregost
