@@ -1,4 +1,5 @@
 bases:
 - cert-manager
 - coreyburmeister
+- default
 - ingress-nginx
