@@ -12,6 +12,7 @@ jobs:
       with:
         personalAccessToken: ${{ secrets.DIGITALOCEAN_TOKEN }}
         clusterName: beregost
+        version: "1.19.7"
     - name: Deploy (dry run)
       run: |
         kubectl apply --server-dry-run -k kustomize/clusters/do-sfo2-beregost
