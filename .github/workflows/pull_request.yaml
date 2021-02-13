@@ -7,11 +7,13 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Set up kubectl
-      uses: matootie/dokube@v1.3.4
+    - name: Install doctl
+      uses: digitalocean/action-doctl@v2
       with:
-        personalAccessToken: ${{ secrets.DIGITALOCEAN_TOKEN }}
-        clusterName: beregost
+        token: ${{ secrets.DIGITALOCEAN_TOKEN }}
+    - name: Save DigitalOcean kubeconfig with short-lived credentials
+      run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 beregost
     - name: Deploy (dry run)
       run: |
-        kubectl apply --server-dry-run -k kustomize/clusters/do-sfo2-beregost
+        kubectl version
+        kubectl apply --dry-run=server -k kustomize/clusters/do-sfo2-beregost
