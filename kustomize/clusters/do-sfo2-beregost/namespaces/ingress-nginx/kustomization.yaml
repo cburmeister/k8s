@@ -1,4 +1,5 @@
+bases:
+- ../../../../apps/ingress-nginx/0.44.0
 namespace: ingress-nginx
-resources:
-- namespace.yaml
+patches:
 - service-workaround.yaml
