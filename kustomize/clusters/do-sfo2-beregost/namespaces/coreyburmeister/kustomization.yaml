@@ -1,4 +1,0 @@
-namespace: coreyburmeister
-resources:
-- ingress.yaml
-- namespace.yaml
