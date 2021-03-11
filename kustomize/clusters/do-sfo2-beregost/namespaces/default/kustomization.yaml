@@ -1,5 +1,5 @@
 bases:
-- ../../../../apps/sealed-secrets/0.14.1
+- ../../../../apps/sealed-secrets/0.15.0
 namespace: default
 resources:
 - namespace.yaml
