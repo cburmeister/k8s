@@ -25,6 +25,10 @@ spec:
       port: 443
       protocol: TCP
       targetPort: https
+    - name: proxied-tcp-8800
+      port: 8800
+      protocol: TCP
+      targetPort: 8800
   selector:
     app.kubernetes.io/name: ingress-nginx
     app.kubernetes.io/instance: ingress-nginx
