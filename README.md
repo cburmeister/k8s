@@ -25,3 +25,4 @@ Each cluster relies on a few custom resources that extend the Kubernetes API:
 
 The configurations in this repository are built, tested and deployed via
 [GitHub Actions](https://github.com/features/actions).
+
