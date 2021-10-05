@@ -1,5 +1,0 @@
-bases:
-- ../../../../apps/sealed-secrets/0.15.0
-namespace: default
-resources:
-- namespace.yaml

@@ -1,4 +1,4 @@
 bases:
 - cert-manager
-- default
 - ingress-nginx
+- sealed-secrets
