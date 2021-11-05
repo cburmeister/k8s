@@ -1,0 +1,3 @@
+bases:
+- ../../../../apps/kube-state-metrics/2.2.3
+namespace: kube-system

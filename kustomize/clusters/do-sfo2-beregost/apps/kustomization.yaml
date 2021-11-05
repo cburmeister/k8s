@@ -1,4 +1,5 @@
 bases:
 - cert-manager
 - ingress-nginx
+- kube-state-metrics
 - sealed-secrets
