@@ -25,6 +25,10 @@ spec:
       port: 443
       protocol: TCP
       targetPort: https
+    - name: proxied-tcp-8900
+      port: 8900
+      protocol: TCP
+      targetPort: 8900
     - name: proxied-tcp-8800
       port: 8800
       protocol: TCP
