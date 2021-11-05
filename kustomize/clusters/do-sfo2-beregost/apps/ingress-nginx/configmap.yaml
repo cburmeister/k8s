@@ -5,3 +5,4 @@ metadata:
   namespace: ingress-nginx
 data:
   8800: "midnightathletics/liquidsoap:8800:PROXY"
+  8801: "midnightathletics/liquidsoap:8801:PROXY"

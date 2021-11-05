@@ -29,6 +29,10 @@ spec:
       port: 8800
       protocol: TCP
       targetPort: 8800
+    - name: proxied-tcp-8801
+      port: 8801
+      protocol: TCP
+      targetPort: 8801
   selector:
     app.kubernetes.io/name: ingress-nginx
     app.kubernetes.io/instance: ingress-nginx
